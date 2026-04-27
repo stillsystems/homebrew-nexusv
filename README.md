@@ -42,4 +42,4 @@ This project is licensed under the MIT License.
 Documentation • [Issues](https://github.com/stillsystems/homebrew-nexusv/issues) • [Support](https://github.com/stillsystems/.github/blob/main/SUPPORT.md)
 
 ---
-⚓ **Still Systems** — Tools engineered for real-world conditions.
+🧱 **Still Systems** — Tools engineered for real-world conditions.
