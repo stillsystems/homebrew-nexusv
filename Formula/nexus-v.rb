@@ -5,21 +5,21 @@
 class NexusV < Formula
   desc "A modern VS Code extension scaffolder with zero runtime dependencies."
   homepage "https://github.com/stillsystems/nexus-v"
-  version "0.2.11"
+  version "0.2.13"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/stillsystems/nexus-v/releases/download/v0.2.11/nexus-v_darwin_amd64.tar.gz"
-      sha256 "b969e315a8f961fe9c0c30e07cbc159128d35644d58d2ebb69c0384010c39d6e"
+      url "https://github.com/stillsystems/nexus-v/releases/download/v0.2.13/nexus-v_darwin_amd64.tar.gz"
+      sha256 "9c5140e9cb2a2703882e3fcba21ba38fd2e0a81bc731ae8bc3646a3e96b77e33"
 
       define_method(:install) do
         bin.install "nexus-v"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/stillsystems/nexus-v/releases/download/v0.2.11/nexus-v_darwin_arm64.tar.gz"
-      sha256 "e34301150d6b8eef35bbce7b9b7cbae1304e4820ae66007ef22a36420f6966ba"
+      url "https://github.com/stillsystems/nexus-v/releases/download/v0.2.13/nexus-v_darwin_arm64.tar.gz"
+      sha256 "72dba0917b5e5a4a3cc72e083a017ac9a7f991824af1087cf9a6cb816d8d15c4"
 
       define_method(:install) do
         bin.install "nexus-v"
@@ -29,15 +29,15 @@ class NexusV < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stillsystems/nexus-v/releases/download/v0.2.11/nexus-v_linux_amd64.tar.gz"
-      sha256 "51d8237e417fd4a9e9c8e355a55f05447bd6be369d7feeeaa127cc001180504f"
+      url "https://github.com/stillsystems/nexus-v/releases/download/v0.2.13/nexus-v_linux_amd64.tar.gz"
+      sha256 "1339bc8a36e0b9a1b039dad37b2e84b980d31c58e81a523c27b9f9e17596d550"
       define_method(:install) do
         bin.install "nexus-v"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stillsystems/nexus-v/releases/download/v0.2.11/nexus-v_linux_arm64.tar.gz"
-      sha256 "aedd3490e7a11119d91549eb682d84f05c16db02444ffb357dfdce7f394bb69d"
+      url "https://github.com/stillsystems/nexus-v/releases/download/v0.2.13/nexus-v_linux_arm64.tar.gz"
+      sha256 "8d089ac624509e9a496b2b35a8e206dab48629660e37facea49beaac2385b30a"
       define_method(:install) do
         bin.install "nexus-v"
       end
