@@ -1,23 +1,27 @@
 name: CI
-
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
 jobs:
-  lint:
-    name: Lint Formula
-    runs-on: ubuntu-latest
+  test:
+    runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: actions/checkout@v6
         with:
-          ruby-version: '3.3'
-      - name: Syntax Check
-        run: ruby -c Formula/*.rb
+          persist-credentials: false
+      - name: Run Brew test-bot
+        run: |
+          brew test-bot --only-cleanup-before
+          brew test-bot --only-setup
+          brew test-bot --only-tap-syntax
+          brew test-bot --only-formulae
